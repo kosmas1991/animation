@@ -28,6 +28,7 @@ AnimationController catController;
         curve: Curves.easeIn
       ),
     );
+    catController.forward();
   }
 
   @override
