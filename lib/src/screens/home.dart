@@ -28,16 +28,23 @@ AnimationController catController;
         curve: Curves.easeIn
       ),
     );
-    catController.forward();
+
   }
 
+  onTap(){
+    catController.forward();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Animation'),
       ),
-      body: buildAnimation(),
+      body: GestureDetector(
+        child: buildAnimation(),
+        onTap: onTap,
+      )
+      ,
     );
   }
 
